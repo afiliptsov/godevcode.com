@@ -2,11 +2,16 @@
 
 :root {
   --defaultBgColor: #121212;
+  --defaultFontColor: #f2f1ef;
   --primatyColor: orange;
   --mainWhite: #fff;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
+  color: var(--defaultFontColor);
   background-color: var(--defaultBgColor);
+  line-height: 1.4;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
