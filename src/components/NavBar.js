@@ -3,11 +3,17 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
 import links from "../constants/links"
+// import { FaAdobe } from "react-icons/fa"
 
-const Button = styled.button`
-  width: 30px;
-  background-color: red;
-  height: 30px;
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  height: 100px;
+
+  .logo {
+    cursor: pointer;
+  }
 `
 
 const NavBar = () => {
@@ -21,12 +27,17 @@ const NavBar = () => {
   })
 
   return (
-    <nav style={{ display: "flex" }}>
-      <Link to="/">
-        <img src={logo} alt="GoDevCode logo" />
-      </Link>
-      <ul style={{ display: "flex" }}>{linkList}</ul>
-    </nav>
+    <Nav style={{ display: "flex" }}>
+      {/* <FaAdobe /> */}
+      <div style={{ width: "20%", marginRight: "10%" }}>
+        <Link to="/" className="logo">
+          <img src={logo} alt="GoDevCode logo" />
+        </Link>
+      </div>
+      <div style={{ width: "70%" }}>
+        <ul style={{ display: "flex" }}>{linkList}</ul>
+      </div>
+    </Nav>
   )
 }
 
